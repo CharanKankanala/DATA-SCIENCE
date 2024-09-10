@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        article {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Data Science Overview</h1>
+    </header>
+
+    <article>
+        <h2>What is Data Science?</h2>
+        <p>Data Science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data. It combines expertise in statistics, computer science, and domain-specific knowledge.</p>
+
+        <h2>Key Concepts in Data Science</h2>
+        <ul>
+            <li><strong>Data Cleaning:</strong> Preparing and cleaning data to ensure it is accurate and usable.</li>
+            <li><strong>Exploratory Data Analysis (EDA):</strong> Analyzing data sets to summarize their main characteristics.</li>
+            <li><strong>Machine Learning:</strong> Algorithms and statistical models that enable computers to improve their performance on tasks through experience.</li>
+            <li><strong>Data Visualization:</strong> Representing data in graphical formats to make insights more accessible.</li>
+        </ul>
+
+        <h2>Sample Data Visualization</h2>
+        <div id="plotly-chart" style="width:100%;height:400px;"></div>
+        <script>
+            var data = [
+                {
+                    x: ['January', 'February', 'March', 'April', 'May'],
+                    y: [10, 15, 13, 17, 19],
+                    type: 'bar'
+                }
+            ];
+
+            var layout = {
+                title: 'Sample Data Visualization',
+                xaxis: { title: 'Month' },
+                yaxis: { title: 'Value' }
+            };
+
+            Plotly.newPlot('plotly-chart', data, layout);
+        </script>
+    </article>
+
+    <footer>
+        <p>&copy; 2024 Data Science Overview</p>
+    </footer>
+</body>
+</html>
